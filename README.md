@@ -99,6 +99,30 @@ The NIST Incident Response Lifecycle includes 4 main phases:
 - **paste the path in file manager**
 ![kali - VMware Workstation 16 Player (Non-commercial use only) 30-04-2025 11_55_33](https://github.com/user-attachments/assets/a85e89f5-4686-4e7c-91d2-2643761e71dc)
 
+# 🔍 Collect Evidence:
+Incident Type: RDP Brute Force Attack on Windows Server
+Exported Event Logs from Event Viewer:
+## Security Logs:
+- **Event ID 4625 – Failed login attempts (account logon failures)**
+- **Account Lockout & Audit Failures highlighted high-volume login failures from a single external IP.**
+- **Tools Used: Windows Event Viewer, PowerShell for filtering logs, and Notepad for documentation.**
+
+# 🧾 Report Incident
+## 🛑 Incident Summary:
+- **Description: Detected a brute force attack targeting the RDP port (3389) of a Windows Server machine.**
+- **Indicators of Compromise (IoCs):**
+- **Multiple failed login attempts in rapid succession (Event ID 4625).**
+- **All attempts originated from a single external IP.**
+- **Attempted usernames: Administrator, Admin, User.**
+
+ # ✅ Actions Taken:
+
+- **Blocked the Attacker IP using Windows Firewall.**
+- **Disabled RDP Access Temporarily to prevent further brute-force attempts.**
+- **Enabled Account Lockout Policies to slow down future attacks.**
+ **Collected and Saved Logs for further analysis and reporting.**
+- **Reported Incident in internal documentation for audit and review.**
+
 # ✅Conclusion
 This lab demonstrated how to:
 - **Simulate an RDP brute-force attack using Hydra**
